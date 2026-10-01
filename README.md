@@ -1,16 +1,30 @@
-## Hi there 👋
+# Paul Thapa
 
-<!--
-**Paul-thapa/Paul-thapa** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+Computer Engineering | Systems & Core Logic
 
-Here are some ideas to get you started:
+```cpp
+#include <iostream>
+#include <cstdint>
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+// Simple 8-bit CPU state simulation
+class VirtualCPU {
+public:
+    uint8_t reg_A = 0;
+    uint8_t reg_B = 0;
+    uint16_t program_counter = 0;
+
+    void execute(std::string op, uint8_t val) {
+        if (op == "LOAD_A") reg_A = val;
+        else if (op == "LOAD_B") reg_B = val;
+        else if (op == "ADD") reg_A += reg_B;
+        program_counter++;
+    }
+};
+
+int main() {
+    VirtualCPU cpu;
+    cpu.execute("LOAD_A", 15);
+    cpu.execute("LOAD_B", 25);
+    cpu.execute("ADD", 0);
+    return 0;
+}
