@@ -1,30 +1,20 @@
 # Paul Thapa
+Computer Engineering | Systems & Low-Level Logic
 
-Computer Engineering | Systems & Core Logic
+---
 
-```cpp
-#include <iostream>
-#include <cstdint>
+### Featured Project
+* 8-bit CPU Simulator: https://github.com/Paul-thapa/8bit-cpu-simulator
+  A C++ hardware state simulation modeling registers, 256-byte RAM, execution flags, and instruction set execution cycles.
 
-// Simple 8-bit CPU state simulation
-class VirtualCPU {
-public:
-    uint8_t reg_A = 0;
-    uint8_t reg_B = 0;
-    uint16_t program_counter = 0;
+---
 
-    void execute(std::string op, uint8_t val) {
-        if (op == "LOAD_A") reg_A = val;
-        else if (op == "LOAD_B") reg_B = val;
-        else if (op == "ADD") reg_A += reg_B;
-        program_counter++;
-    }
-};
+### Technical Skills
+* Languages: C, C++ (Procedural & OOP)
+* Core Domains: Computer Architecture, Low-Level State Simulation, Digital Logic
+* Tools: Git, GitHub, Linux/Terminal Basics
 
-int main() {
-    VirtualCPU cpu;
-    cpu.execute("LOAD_A", 15);
-    cpu.execute("LOAD_B", 25);
-    cpu.execute("ADD", 0);
-    return 0;
-}
+---
+
+### Connect
+* GitHub Profile: https://github.com/Paul-thapa
